@@ -1,22 +1,31 @@
 package cipher
 
-import "conversion/pkg"
+func Map[X, Y any](xs []X, f func(x X, n int) Y) []Y {
+	ys := make([]Y, len(xs))
+	for i := range xs {
+		ys[i] = f(xs[i], i)
+	}
+	return ys
+}
 
-//rはROT:r文字ずらす
-func Ceaser(s []string, r int) []string {
-	var res []string = pkg.Map(s, func(t string) string {
+func Ceaser(s string) []string {
+	var ss []string = []string{}
+	for i := 0; i < 26; i++ {
+		ss = append(ss, s)
+	}
+	var res []string = Map(ss, func(t string, r int) string {
 		tmp := ""
-		sub := "AZaz"
-		for i := range t {
+		for j := range t {
 			switch {
-			case (sub[0] <= t[i] && t[i] <= sub[1]):
-				tmp = tmp + string((t[i]-sub[0]+byte(r))%26+sub[0])
-			case (sub[2] <= t[i] && t[i] <= sub[3]):
-				tmp = tmp + string((t[i]-sub[2]+byte(r))%26+sub[2])
+			case ('A' <= t[j] && t[j] <= 'Z'):
+				tmp = tmp + string((t[j]-'A'+byte(r))%26+'A')
+			case ('a' <= t[j] && t[j] <= 'z'):
+				tmp = tmp + string((t[j]-'a'+byte(r))%26+'a')
 			default:
 				//何もしない
 			}
 		}
+
 		return tmp
 	})
 	return res

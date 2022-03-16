@@ -10,11 +10,9 @@ func main() {
 	//var v []string = cipher.Ceaser([]string{"abc", "def", "ghi", "jkl"}, 4)
 	//fmt.Println('あ')
 
-	//var v []string = []string{"abc", "lmn", "xyz", "ABC"}
-	//for i := 0; i < 26; i++ {
-	//	fmt.Println(cipher.Ceaser(v, i))
-	//}
+	var v string = "abcdefghijklmn"
+	fmt.Println(cipher.Ceaser(v))
 
-	v := "abcdefghijklmnop"
-	fmt.Println(cipher.Transpose(v, 5))
+	//v := "abcdefghijklmnop"
+	//fmt.Println(cipher.Transpose(v, 5))
 }
