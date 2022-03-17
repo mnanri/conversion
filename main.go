@@ -7,12 +7,13 @@ import (
 
 func main() {
 	//動作テスト用
-	//var v []string = cipher.Ceaser([]string{"abc", "def", "ghi", "jkl"}, 4)
-	//fmt.Println('あ')
-
-	var v string = "abcdefghijklmn"
-	fmt.Println(cipher.Ceaser(v))
+	//var v string = "abcdefghijklmn"
+	//fmt.Println(cipher.Ceaser(v))
 
 	//v := "abcdefghijklmnop"
 	//fmt.Println(cipher.Transpose(v, 5))
+
+	n := cipher.GenBunrhamKey()
+	fmt.Println(n)
+	println(cipher.Burnham("Hello,world!", n))
 }
