@@ -10,10 +10,10 @@ func main() {
 	//var v string = "abcdefghijklmn"
 	//fmt.Println(cipher.Ceaser(v))
 
-	//v := "abcdefghijklmnop"
-	//fmt.Println(cipher.Transpose(v, 5))
+	v := "abcdefghijklmnop"
+	fmt.Println(cipher.Transpose(v, 5))
 
-	n := cipher.GenBunrhamKey()
-	fmt.Println(n)
-	println(cipher.Burnham("Hello,world!", n))
+	//n := cipher.GenBunrhamKey()
+	//fmt.Println(n)
+	//println(cipher.Burnham("Hello,world!", n))
 }

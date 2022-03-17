@@ -4,6 +4,7 @@ import (
 	"conversion/pkg"
 	"math/rand"
 	"strings"
+	"time"
 )
 
 func Transpose(s string, n int) string {
@@ -25,6 +26,7 @@ func Transpose(s string, n int) string {
 	for i := 0; i < n; i++ {
 		order = append(order, i)
 	}
+	rand.Seed(time.Now().UnixNano())
 	for i := n - 1; i > 0; i-- {
 		j := rand.Intn(i + 1)
 		order[i], order[j] = order[j], order[i]
