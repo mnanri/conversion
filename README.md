@@ -60,6 +60,7 @@ type PrivateKey struct {
 }
 ```
 `GenRsaKey() (*Publickey, *PrivateKey) // 鍵生成`
+
 `RsaEnc(pk *Publickey, m string) []big.Int // 暗号化`
 ```
 // 公開鍵と秘密鍵を生成します。
