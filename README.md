@@ -6,6 +6,8 @@
 OSS作りの練習として作成したものです。
 小さいサイズの文字列を手元で暗号化したいときにでも使ってください。
 
+[![Go Reference](https://pkg.go.dev/badge/conversion.svg)](https://pkg.go.dev/conversion)
+
 ## 実装している暗号
 `import "conversion/pkg"`していれば`conversion.pkg.cipher`は`cipher`となります。
 ### シーザー暗号（古典暗号）
