@@ -3,14 +3,14 @@ package cipher
 func Map[X, Y any](xs []X, f func(x X, n int) Y) []Y {
 	ys := make([]Y, len(xs))
 	for i := range xs {
-		ys[i] = f(xs[i], i)
+		ys[i] = f(xs[i], i+1)
 	}
 	return ys
 }
 
 func Ceaser(s string) []string {
 	var ss []string = []string{}
-	for i := 0; i < 26; i++ {
+	for i := 0; i < 13; i++ {
 		ss = append(ss, s)
 	}
 	var res []string = Map(ss, func(t string, r int) string {
