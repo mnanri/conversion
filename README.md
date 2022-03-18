@@ -1,5 +1,6 @@
 # conversion
 **Mercari spring intern Gophers 2022**
+
 ジェネリクスを使った関数を実装しているので、このレポジトリは go 1.18 以降を対象としています。
 
 OSS作りの練習として作成したものです。
